@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        箭头函数最直观的三个他带你
+        1. 不需要function关键字来创建函数
+        2， 省略return关键字
+        3. 继承当前上下文的this关键字
+        */
+
+        // 箭头函数
+        //他也是一种函数的定义，它简化定义仅此而已
+        //声明式定义
+        function add(){
+
+        };
+
+        //表达式的定义
+        var add2 = function(){
+
+        };
+
+        //箭头定义函数
+        var sum = (a=100,b=300)=>{
+            console.log(a+b);
+        };
+
+        sum(50,50)
+
+        sum();
+
+        sum(400);
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>

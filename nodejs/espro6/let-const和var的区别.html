@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //let 和 const解决
+        //1. var的变量穿透的问题
+        //2. 常量修改的问题
+        for(let i = 0;i<5;i++){
+            console.log(i);
+        }
+
+        //这里就会早成变量穿透 i = 5
+        // console.log(i);
+
+        const PI = Math.PI;
+        PI = 100; // 常量const不能修改
+        console.log(PI);
+
+    </script>
+</body>
+</html>
