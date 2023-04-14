@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象简写</title>
+</head>
+<body>
+    <script>
+        function person(name,age){
+            // return { name:name,age:age};
+
+            //对象简写
+            return { name,age};
+        };
+
+        //调用和执行
+        var json = person("温彬",20);
+        console.log(json.name,json.age);
+
+
+        //====================实战应用=====================
+        // <button onclick="login()">登录</button>
+        //发送ajax
+        function login(){
+            var username = $("#username").val();
+            var password = $("#password").val();
+
+            //发送ajax
+            $.ajax({
+                type:"post",
+                //对象简写
+                data:{ username,password },
+                //原始写法
+                // data:{username:username,password:password},
+                success(){
+                    console.log("登录成功");
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>

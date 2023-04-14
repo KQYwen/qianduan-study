@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传播操作符</title>
+</head>
+<body>
+    <script>
+        //定义一个对象
+        var person1={
+            name:'小飞飞',
+            age:13,
+        };
+
+        //2: 对象解构
+        var {name,age} = person1;
+
+        // console.log(name,age);
+
+        //========== ...对象融合============
+        var person2 = {
+            ...person1,
+            gender:1,
+            tel:13227069679,
+        };
+
+        console.log(person2);
+
+        //=============...对象取值==============
+        var person3 = {
+            name:"wenbin",
+            gender:1,
+            tel:"1111",
+            address:'西安'
+        };
+
+        //...person4 把剩下没取走的给我
+        var {name,gender,...person4}=person3;
+        console.log(name);
+        console.log(age);
+        console.log(person4);
+
+
+        //=================场景分析 -----伪代码========================
+        //模拟后台：异步查询返回用户数据，如下：
+        function findUsers(){
+            $.get("xxx",function(res){
+                var res = {
+                    pages:11,
+                    pageSize:10,
+                    pageNo:1,
+                    firstFlag:true,
+                    lastFlag:false,
+                    total:123,
+                    data:[{},{},{}],
+                };
+            });
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
